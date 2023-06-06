@@ -1,0 +1,34 @@
+{
+    "name": "plugin/mvdh-environments",
+    "description": "Add external environments to the Wordpress admin bar.",
+    "authors": [
+        {
+            "name": "Mike van den Hoek",
+            "email": "mikevdhoek1991@gmail.com",
+            "homepage": "https://www.mikevandenhoek.nl.nl"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "szepeviktor/phpstan-wordpress": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MVDH\\Environments\\": "./src/Environments"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix",
+        "phpstan": "./vendor/bin/phpstan analyse"
+    }
+}
